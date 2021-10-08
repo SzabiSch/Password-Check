@@ -3,15 +3,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Open Sans", sans-serif;
 }
-article {
-  text-align: center;
-}
+
 h1 {
   font-family: "Lobster", cursive;
   font-size: 5rem;
   color: white;
   text-shadow: 5px 4px 1px black;
+}
+article {
+  text-align: center;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
 }
 
 /*input:checked ~ h1*/
@@ -21,22 +26,34 @@ h1 {
 
 @keyframes coloring {
   0% {
-    text-shadow: -10px -5px 1px black;
+    text-shadow: -10px -5px 10px green;
   }
 
   25% {
-    text-shadow: 10px -5px 15px black;
+    text-shadow: 10px -5px 15px blue;
   }
 
   50% {
-    text-shadow: 10px 5px 1px black;
+    text-shadow: 10px 5px 10px yellow;
   }
   75% {
-    text-shadow: -10px 5px 15px black;
+    text-shadow: -10px 5px 15px red;
   }
 }
+article {
+  font-family: "open-sans";
+  margin-top: 2rem;
+}
+
+button {
+  color: white;
+  background-color: black;
+}
+
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .pre-condition-1::after {
@@ -61,4 +78,50 @@ ul {
 
 /*for Desktop*/
 @media screen and (min-width: 700px) {
+  article {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .media-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .media-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*for Desktop*/
+@media screen and (min-width: 1024px) {
+  article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    color: black;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .media-left {
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+  }
+  /* Hier fehlt noch was nach meinem Wunsch und zwar: links geordnet*/
+  .media-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-left: 5rem;
+  }
 }
