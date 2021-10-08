@@ -1,7 +1,12 @@
 body {
   background-color: salmon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+article {
+  text-align: center;
+}
 h1 {
   font-family: "Lobster", cursive;
   font-size: 5rem;
@@ -10,31 +15,49 @@ h1 {
 }
 
 /*input:checked ~ h1*/
-h1:hover {
-  animation: coloring 4s infinite;
+h1 {
+  animation: coloring 10s infinite;
 }
 
 @keyframes coloring {
   0% {
-    text-shadow: -5px -3px 5px black;
+    text-shadow: -10px -5px 1px black;
   }
 
   25% {
-    text-shadow: 5x -3px 5px black;
+    text-shadow: 10px -5px 15px black;
   }
 
   50% {
-    text-shadow: 5px 3px 5px black;
+    text-shadow: 10px 5px 1px black;
   }
   75% {
-    text-shadow: -5px 3px 5px black;
+    text-shadow: -10px 5px 15px black;
   }
 }
+ul {
+  list-style-type: none;
+}
 
-/* for Emoys
-.student::after {
-  content: "ðŸ§‘â€ðŸ«";
-  */
+.pre-condition-1::after {
+  content: " ❌";
+}
+
+.pre-condition-2::after {
+  content: " ❌";
+}
+
+.pre-condition-3::after {
+  content: " ❌";
+}
+
+.pre-condition-4::after {
+  content: " ❌";
+}
+
+.pre-condition-5::after {
+  content: " ❌";
+}
 
 /*for Desktop*/
 @media screen and (min-width: 700px) {
