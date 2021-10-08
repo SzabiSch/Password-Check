@@ -1,0 +1,41 @@
+body {
+  background-color: salmon;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 5px 4px 1px black;
+}
+
+/*input:checked ~ h1*/
+h1:hover {
+  animation: coloring 4s infinite;
+}
+
+@keyframes coloring {
+  0% {
+    text-shadow: -5px -3px 5px black;
+  }
+
+  25% {
+    text-shadow: 5x -3px 5px black;
+  }
+
+  50% {
+    text-shadow: 5px 3px 5px black;
+  }
+  75% {
+    text-shadow: -5px 3px 5px black;
+  }
+}
+
+/* for Emoys
+.student::after {
+  content: "ðŸ§‘â€ðŸ«";
+  */
+
+/*for Desktop*/
+@media screen and (min-width: 700px) {
+}
