@@ -29,18 +29,18 @@ h1 {
 
 @keyframes coloring {
   0% {
-    text-shadow: -20px -10px 10px green;
+    text-shadow: -30px -15px 15px green;
   }
 
   25% {
-    text-shadow: 20px -10px 15px blue;
+    text-shadow: 30px -15px 15px blue;
   }
 
   50% {
-    text-shadow: 20px 10px 10px yellow;
+    text-shadow: 30px 15px 15px yellow;
   }
   75% {
-    text-shadow: -20px 10px 15px brown;
+    text-shadow: -30px 15px 15px brown;
   }
 }
 
@@ -72,56 +72,7 @@ ul {
   padding: 0;
   margin: 0;
 }
-/* EMOJIS WERDEN HINTER DEN TEXTFELDERN PLATZIERT */
-/* EQUAL*/
-.equal-content-yes {
-  visibility: hidden;
-}
 
-.equal-content-no {
-  visibility: visible;
-  margin-left: -25px;
-}
-
-/* LOWER CASE*/
-.lower-content-yes {
-  visibility: hidden;
-}
-
-.lower-content-no {
-  visibility: visible;
-  margin-left: -25px;
-}
-
-/* UPPER CASE*/
-.upper-content-yes {
-  visibility: hidden;
-}
-
-.upper-content-no {
-  visibility: visible;
-  margin-left: -25px;
-}
-
-/* CONTENT NUMBER*/
-.number-content-yes {
-  visibility: hidden;
-}
-
-.number-content-no {
-  visibility: visible;
-  margin-left: -25px;
-}
-
-/* AT LEAST 10 CHARACTER*/
-.char-content-yes {
-  visibility: hidden;
-}
-
-.char-content-no {
-  visibility: visible;
-  margin-left: -25px;
-}
 
 /*for Desktop OVER 700PX*/
 @media screen and (min-width: 700px ) {
