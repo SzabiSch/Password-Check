@@ -6,20 +6,29 @@ function myFunction() {
   if (pass1.type === "password" || pass2.type === "password") {
     pass1.type = "text";
     pass2.type = "text";
+
+    //label.classList.remove("ShowPassword");
+    //label.classList.add("HiddenPassword");
   } else {
     pass1.type = "password";
     pass2.type = "password";
+    //label.classList.add("ShowPassword");
+    //label.classList.remove("HiddenPassword");
   }
 }
+classList.remove("ShowPassword");
 
-const textOfPass1 = document.querySelector("#myInput1");
-const pass1 = textOfPass1.value.trim();
+label.classList.add("ShowPassword");
+label.classList.remove("HiddenPassword");
 
-const textOfPass2 = document.querySelector("#myInput2");
-const pass2 = textOfPass2.value.trim();
+function buttonCahnge() {
+  document.getElementById("hidden-show").innerHTML = "Hidden Passwort";
+}
 
-const evenOrNot = document.querySelector("#start-test");
-eventOrNot.addEventListener("keyup", controlPasswords);
+//const textOfPass1 = document.querySelector("#myInput1");
 
-console.log("Pass1: " + pass1);
-console.log("Pass2: " + pass2);
+//const evenOrNot = document.querySelector("#start-test");
+//eventOrNot.addEventListener("click", controlPasswords);
+//function controlPasswords() {
+//if (pass1 !=== pass2)
+//}

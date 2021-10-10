@@ -27,17 +27,40 @@
           <input type="password" value="" id="myInput2" />
           <br />
 
-          <button id="start-test" onclick="myFunction()">Show Passwords</button>
+          <button onclick="myFunction()">
+            <span class="ShowPassword">Show Passwords</span>
+            <span class="HiddenPassword">Hidden Passwords</span>
+          </button>
         </form>
       </section>
       <br />
       <section class="media-right">
         <ul>
-          <li class="pre-condition-1">Passwords are equal</li>
-          <li class="pre-condition-2">Lower Case Latters</li>
-          <li class="pre-condition-3">Upper Case Letters</li>
-          <li class="pre-condition-4">Contains Numbers</li>
-          <li class="pre-condition-5">At least 10 characters long</li>
+          <li class="pre-condition-1">
+            Passwords are equal
+            <span class="equal-content-yes">✅</span>
+            <span class="equal-content-no">❌</span>
+          </li>
+          <li class="pre-condition-2">
+            Lower Case Latters
+            <span class="lower-content-yes">✅</span>
+            <span class="lower-content-no">❌</span>
+          </li>
+          <li class="pre-condition-3">
+            Upper Case Letters
+            <span class="upper-content-yes">✅</span>
+            <span class="upper-content-no">❌</span>
+          </li>
+          <li class="pre-condition-4">
+            Contains Numbers
+            <span class="number-content-yes">✅</span>
+            <span class="number-content-no">❌</span>
+          </li>
+          <li class="pre-condition-5">
+            At least 10 characters long
+            <span class="char-content-yes">✅</span>
+            <span class="char-content-no">❌</span>
+          </li>
         </ul>
       </section>
     </article>

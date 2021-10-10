@@ -3,7 +3,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -44,40 +43,87 @@ article {
   font-family: "open-sans";
   margin-top: 2rem;
 }
+input {
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 150px;
+  margin-bottom: 1rem;
+}
 
 button {
   color: white;
   background-color: black;
+  border-radius: 2px;
+  width: 154px;
+  font-size: medium;
 }
 
+.ShowPassword {
+  visibility: visible;
+  padding-top: 0.5rem;
+}
+.HiddenPassword {
+  visibility: hidden;
+}
 ul {
   list-style-type: none;
+  font-family: "Open Sans";
   padding: 0;
   margin: 0;
 }
-
-.pre-condition-1::after {
-  content: " ❌";
+/* EMOJIS WERDEN HINTER DEN TEXTFELDERN PLATZIERT */
+/* EQUAL*/
+.equal-content-yes {
+  visibility: hidden;
 }
 
-.pre-condition-2::after {
-  content: " ❌";
+.equal-content-no {
+  visibility: visible;
+  margin-left: -25px;
 }
 
-.pre-condition-3::after {
-  content: " ❌";
+/* LOWER CASE*/
+.lower-content-yes {
+  visibility: hidden;
 }
 
-.pre-condition-4::after {
-  content: " ❌";
+.lower-content-no {
+  visibility: visible;
+  margin-left: -25px;
 }
 
-.pre-condition-5::after {
-  content: " ❌";
+/* UPPER CASE*/
+.upper-content-yes {
+  visibility: hidden;
 }
 
-/*for Desktop*/
-@media screen and (min-width: 700px) {
+.upper-content-no {
+  visibility: visible;
+  margin-left: -25px;
+}
+
+/* CONTENT NUMBER*/
+.number-content-yes {
+  visibility: hidden;
+}
+
+.number-content-no {
+  visibility: visible;
+  margin-left: -25px;
+}
+
+/* AT LEAST 10 CHARACTER*/
+.char-content-yes {
+  visibility: hidden;
+}
+
+.char-content-no {
+  visibility: visible;
+  margin-left: -25px;
+}
+
+/*for Desktop OVER 700PX*/
+@media screen and (min-width: 700px max-width: 1023px) {
   article {
     display: flex;
     justify-content: space-around;
@@ -91,11 +137,13 @@ ul {
   .media-left {
     display: flex;
     align-items: center;
+    margin-right: 1rem;
   }
 
   .media-right {
     display: flex;
     align-items: center;
+    margin-left: 1rem;
   }
 }
 
@@ -120,7 +168,6 @@ ul {
   .media-right {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
 
     margin-left: 5rem;
   }
