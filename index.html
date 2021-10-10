@@ -21,45 +21,39 @@
       <section class="media-left">
         <form onsubmit="return false">
           <!-- Password field -->
-
           <input type="password" value="" id="myInput1" />
           <br />
           <input type="password" value="" id="myInput2" />
           <br />
-
-          <button onclick="myFunction()">
-            <span class="ShowPassword">Show Passwords</span>
-            <span class="HiddenPassword">Hidden Passwords</span>
-          </button>
+          <button onclick="myFunction()" id="show-hidden">Show Password</button>
         </form>
       </section>
       <br />
       <section class="media-right">
         <ul>
-          <li class="pre-condition-1">
+          <li>
             Passwords are equal
-            <span class="equal-content-yes">✅</span>
-            <span class="equal-content-no">❌</span>
+
+            <span id="equal-content-">❌</span>
           </li>
-          <li class="pre-condition-2">
+          <li>
             Lower Case Latters
-            <span class="lower-content-yes">✅</span>
-            <span class="lower-content-no">❌</span>
+
+            <span class="lower-content">❌</span>
           </li>
-          <li class="pre-condition-3">
+          <li>
             Upper Case Letters
-            <span class="upper-content-yes">✅</span>
-            <span class="upper-content-no">❌</span>
+
+            <span class="upper-content">❌</span>
           </li>
-          <li class="pre-condition-4">
+          <li>
             Contains Numbers
-            <span class="number-content-yes">✅</span>
-            <span class="number-content-no">❌</span>
+
+            <span class="number-content">❌</span>
           </li>
-          <li class="pre-condition-5">
+          <li>
             At least 10 characters long
-            <span class="char-content-yes">✅</span>
-            <span class="char-content-no">❌</span>
+            <span id="char-content">❌</span>
           </li>
         </ul>
       </section>
