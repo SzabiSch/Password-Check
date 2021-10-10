@@ -7,28 +7,35 @@ function myFunction() {
     pass1.type = "text";
     pass2.type = "text";
 
-    //label.classList.remove("ShowPassword");
-    //label.classList.add("HiddenPassword");
+    //label.parentElement.classList.remove("ShowPassword");
+    //label.parentElement.classList.add("HiddenPassword");
   } else {
     pass1.type = "password";
     pass2.type = "password";
-    //label.classList.add("ShowPassword");
-    //label.classList.remove("HiddenPassword");
+    //label.parentElement.classList.add("ShowPassword");
+    //label.parentElement.classList.remove("HiddenPassword");
   }
 }
-classList.remove("ShowPassword");
 
-label.classList.add("ShowPassword");
-label.classList.remove("HiddenPassword");
+const inputPasswordFirst = document.querySelector("#myInput1");
+inputPasswordFirst.addEventListener("keyup", writeThePass);
 
-function buttonCahnge() {
-  document.getElementById("hidden-show").innerHTML = "Hidden Passwort";
+const inputPasswordSecond = document.querySelector("#myInput2");
+inputPasswordSecond.addEventListener("keyup", writeThePass);
+
+function writeThePass() {
+  // console.log("Pass first: " + inputPasswordFirst.value);
+  //console.log("second first: " + inputPasswordSecond.value);
 }
 
-//const textOfPass1 = document.querySelector("#myInput1");
-
-//const evenOrNot = document.querySelector("#start-test");
-//eventOrNot.addEventListener("click", controlPasswords);
-//function controlPasswords() {
-//if (pass1 !=== pass2)
-//}
+function passequal() {
+  if (inputPasswordFirst.value === inputPasswordSecond.value) {
+    console.log(inputPasswordSecond.value);
+    console.log("fast fertig");
+    equal - content - yes.parentElement.classList.add("equal-content-yes");
+    equal - content - no.parentElement.classList.remove("equal-content-no");
+  } else {
+    equal - content - no.parentElement.classList.remove("equal-content-no");
+    equal - content - yes.parentElement.classList.add("equal-content-yes");
+  }
+}

@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -14,9 +15,12 @@ h1 {
 article {
   text-align: center;
   color: black;
-  font-family: "Open Sans", sans-serif;
+  
   font-size: 1.2rem;
+  margin-top: 2rem;
+  width: 300px;
 }
+
 
 /*input:checked ~ h1*/
 h1 {
@@ -25,23 +29,21 @@ h1 {
 
 @keyframes coloring {
   0% {
-    text-shadow: -10px -5px 10px green;
+    text-shadow: -20px -10px 10px green;
   }
 
   25% {
-    text-shadow: 10px -5px 15px blue;
+    text-shadow: 20px -10px 15px blue;
   }
 
   50% {
-    text-shadow: 10px 5px 10px yellow;
+    text-shadow: 20px 10px 10px yellow;
   }
   75% {
-    text-shadow: -10px 5px 15px red;
+    text-shadow: -20px 10px 15px brown;
   }
 }
-article {
-  font-family: "open-sans";
-  margin-top: 2rem;
+
 }
 input {
   border: 2px solid black;
@@ -59,11 +61,10 @@ button {
 }
 
 .ShowPassword {
-  visibility: visible;
-  padding-top: 0.5rem;
+  font-size: 1rem;
 }
 .HiddenPassword {
-  visibility: hidden;
+  font-size: 1rem;
 }
 ul {
   list-style-type: none;
@@ -123,7 +124,7 @@ ul {
 }
 
 /*for Desktop OVER 700PX*/
-@media screen and (min-width: 700px max-width: 1023px) {
+@media screen and (min-width: 700px ) {
   article {
     display: flex;
     justify-content: space-around;
@@ -132,6 +133,7 @@ ul {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
+    width: 600px;
   }
 
   .media-left {
@@ -166,8 +168,8 @@ ul {
   }
   /* Hier fehlt noch was nach meinem Wunsch und zwar: links geordnet*/
   .media-right {
-    display: flex;
-    align-items: flex-start;
+  
+    align-items: left;
 
     margin-left: 5rem;
   }
