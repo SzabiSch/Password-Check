@@ -2,7 +2,7 @@
 
 //Um nicht kaputt zu machen, ich habe CODE in JSBin getestet, da läuft!!!
 //What der heilige Bim Bam passiert hier?!?!?!
-function myFunction() {
+function myFunctionShowHidden() {
   const btnShowHidden = document.getElementById("show-hidden");
   var pass1 = document.getElementById("myInput1");
   var pass2 = document.getElementById("myInput2");
@@ -31,22 +31,28 @@ function writeThePass() {
 //Wenn pass1 gleich mit pass2 wird controlContinue Wert 1, und die andere Conditionen
 //werden 2 Voraussetzungen erfülen müssen, erstaml Wert soll 1 sein sprich
 //nur wenn pass1 gleich pass2 dann kommt die tatsächliche kontrolle
-let controlContinue = 0;
 
-myInput2.addEventListener("keyup", controlEqual());
+myInput2.addEventListener("keyup", controlEqual);
 
 function controlEqual() {
-  if (inputPasswordFirst.value == inputPasswordSecond.value) {
-    console.log("Hollee");
-    console.log(inputPasswordFirst.value);
-    controlContinue++;
+  const passEqual1 = inputPasswordFirst.value;
+  const passEqual2 = inputPasswordSecond.value;
+  const contEqual = document.getElementById("equal-content");
+  if (passEqual1 === passEqual2) {
+    contEqual.innerText = "✅";
+    includeLowerCase();
+    includeUpperCase();
+    includeNumber();
+    tenCharachter();
+  } else {
+    contEqual.innerText = "❌";
   }
 }
 
 function includeLowerCase() {
   const contLow = document.getElementById("lower-content");
 
-  if (controlContinue === 1 && /[a-z]/.test(inputPasswordSecond)) {
+  if (/[a-z]/.test(inputPasswordSecond.value)) {
     contLow.innerText = "✅";
   } else {
     contLow.innerText = "❌";
@@ -56,7 +62,7 @@ function includeLowerCase() {
 function includeUpperCase() {
   const contUpp = document.getElementById("upper-content");
 
-  if (controlContinue === 1 && /[A-Z]/.test(inputPasswordSecond)) {
+  if (/[A-Z]/.test(inputPasswordSecond.value)) {
     contUpp.innerText = "✅";
   } else {
     contUpp.innerText = "❌";
@@ -65,7 +71,7 @@ function includeUpperCase() {
 
 function includeNumber() {
   const contNumb = document.getElementById("number-content");
-  if (controlContinue === 1 && /[0-9]/.test(inputPasswordSecond)) {
+  if (/[0-9]/.test(inputPasswordSecond.value)) {
     contNumb.innerText = "✅";
   } else {
     contNumb.innerText = "❌";
@@ -75,7 +81,7 @@ function includeNumber() {
 function tenCharachter() {
   const moreThanTen = document.getElementById("char-content");
 
-  if (controlContinue === 1 && inputPasswordFirst.length >= 10) {
+  if (inputPasswordFirst.value.length >= 10) {
     moreThanTen.innerText = "✅";
   } else {
     moreThanTen.innerText = "❌";

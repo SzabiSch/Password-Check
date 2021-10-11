@@ -25,7 +25,9 @@
           <br />
           <input type="password" value="" id="myInput2" />
           <br />
-          <button onclick="myFunction()" id="show-hidden">Show Password</button>
+          <button onclick="myFunctionShowHidden()" id="show-hidden">
+            Show Password
+          </button>
         </form>
       </section>
       <br />
@@ -33,23 +35,22 @@
         <ul>
           <li>
             Passwords are equal
-
-            <span id="equal-content-">❌</span>
+            <span id="equal-content">❌</span>
           </li>
           <li>
             Lower Case Latters
 
-            <span class="lower-content">❌</span>
+            <span id="lower-content">❌</span>
           </li>
           <li>
             Upper Case Letters
 
-            <span class="upper-content">❌</span>
+            <span id="upper-content">❌</span>
           </li>
           <li>
             Contains Numbers
 
-            <span class="number-content">❌</span>
+            <span id="number-content">❌</span>
           </li>
           <li>
             At least 10 characters long
