@@ -1,0 +1,127 @@
+body {
+  background-color: salmon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 5px 4px 1px black;
+}
+article {
+  text-align: center;
+  color: black;
+  
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  width: 300px;
+}
+
+
+/*input:checked ~ h1*/
+h1 {
+  animation: coloring 10s infinite;
+}
+
+@keyframes coloring {
+  0% {
+    text-shadow: -30px -15px 15px green;
+  }
+
+  25% {
+    text-shadow: 30px -15px 15px blue;
+  }
+
+  50% {
+    text-shadow: 30px 15px 15px yellow;
+  }
+  75% {
+    text-shadow: -30px 15px 15px brown;
+  }
+}
+
+}
+input {
+  border: 2px solid black;
+  border-radius: 2px;
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+button {
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  width: 154px;
+  font-size: medium;
+}
+
+.ShowPassword {
+  font-size: 1rem;
+}
+.HiddenPassword {
+  font-size: 1rem;
+}
+ul {
+  list-style-type: none;
+  font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
+}
+
+
+/*for Desktop OVER 700PX*/
+@media screen and (min-width: 700px ) {
+  article {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 600px;
+  }
+
+  .media-left {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .media-right {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+}
+
+/*for Desktop*/
+@media screen and (min-width: 1024px) {
+  article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    color: black;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .media-left {
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+  }
+  /* Hier fehlt noch was nach meinem Wunsch und zwar: links geordnet*/
+  .media-right {
+  
+    align-items: left;
+
+    margin-left: 5rem;
+  }
+}
