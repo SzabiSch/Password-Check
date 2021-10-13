@@ -1,5 +1,10 @@
 //Password Field inkl Hidden/show Button
 
+const contUpp = document.getElementById("upper-content");
+const contNumb = document.getElementById("number-content");
+const moreThanTen = document.getElementById("char-content");
+const contLow = document.getElementById("lower-content");
+
 //Um nicht kaputt zu machen, ich habe CODE in JSBin getestet, da läuft!!!
 //What der heilige Bim Bam passiert hier?!?!?!
 function myFunctionShowHidden() {
@@ -28,11 +33,10 @@ function writeThePass() {
   console.log("Pass second: " + inputPasswordSecond.value);
 }
 
-//Wenn pass1 gleich mit pass2 wird controlContinue Wert 1, und die andere Conditionen
-//werden 2 Voraussetzungen erfülen müssen, erstaml Wert soll 1 sein sprich
-//nur wenn pass1 gleich pass2 dann kommt die tatsächliche kontrolle
+myInput1.addEventListener("input", controlEqual);
+myInput2.addEventListener("input", controlEqual);
 
-myInput2.addEventListener("keyup", controlEqual);
+let startAnimation = 0;
 
 function controlEqual() {
   const passEqual1 = inputPasswordFirst.value;
@@ -44,46 +48,56 @@ function controlEqual() {
     includeUpperCase();
     includeNumber();
     tenCharachter();
+    startAnimation++;
+    return startAnimation;
+    console.log(startAnimation);
   } else {
     contEqual.innerText = "❌";
+    contLow.innerText = "❌";
+    contUpp.innerText = "❌";
+    contNumb.innerText = "❌";
+    moreThanTen.innerText = "❌";
   }
 }
 
 function includeLowerCase() {
-  const contLow = document.getElementById("lower-content");
-
   if (/[a-z]/.test(inputPasswordSecond.value)) {
     contLow.innerText = "✅";
+
+    return contLow;
   } else {
     contLow.innerText = "❌";
   }
 }
 
 function includeUpperCase() {
-  const contUpp = document.getElementById("upper-content");
-
   if (/[A-Z]/.test(inputPasswordSecond.value)) {
     contUpp.innerText = "✅";
+    startAnimation++;
+    return startAnimation;
   } else {
     contUpp.innerText = "❌";
   }
 }
 
 function includeNumber() {
-  const contNumb = document.getElementById("number-content");
   if (/[0-9]/.test(inputPasswordSecond.value)) {
     contNumb.innerText = "✅";
+    startAnimation++;
+    return startAnimation;
   } else {
     contNumb.innerText = "❌";
   }
 }
 
 function tenCharachter() {
-  const moreThanTen = document.getElementById("char-content");
-
   if (inputPasswordFirst.value.length >= 10) {
     moreThanTen.innerText = "✅";
+    startAnimation++;
+    return startAnimation;
   } else {
     moreThanTen.innerText = "❌";
   }
 }
+
+console.log("Animation: " + startAnimation);
